@@ -54,7 +54,7 @@ class OrderConfirm extends React.Component {
                      />
                 </TouchableOpacity>  
                 <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-                    <Text style={{fontSize:18,color:'white',alignSelf:'center'}}>订单确认</Text>   
+                    <Text style={{fontSize:18,color:'white',alignSelf:'center',marginTop:15}}>订单确认</Text>   
                 </View>  
                 <View style={{width:48,height:48,}}></View>
           </View>

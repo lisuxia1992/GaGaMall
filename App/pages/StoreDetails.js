@@ -50,7 +50,7 @@ class StoreDetails extends Component {
          selectIndexItem : '',
          
       }
-      itemMap =Object.keys(this.state.RIGHT_ITEMS);  
+      itemMap = Object.keys(this.state.RIGHT_ITEMS);  
       selectedItem=itemMap[0];
   }
 
@@ -210,22 +210,22 @@ class StoreDetails extends Component {
   //渲染顶部头布局
   renderTopLayout(){
      return (
-       <View style={{height:48,backgroundColor:'black',flexDirection:'row'}}>
-                <View style={{width:48,height:48,justifyContent:'center'}}>
+       <View style={{height:44,backgroundColor:'black',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'center'}}>
                      <TouchableOpacity onPress={() => {this.buttonBackAction()}} style={{justifyContent:'center',alignItems:'center'}} >
                            <Image 
-                                 style={{width:13,height:20}}
+                                 style={{width:10,height:12,marginTop:10}}
                                  source={require('../imgs/ic_center_back.png')}
                            />
                      </TouchableOpacity>  
                 </View>
                 <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                     <Text style={{color:'white',fontSize:18}}>商品列表</Text>
+                     <Text style={{color:'white',fontSize:17,marginTop:10}}>商品列表</Text>
                 </View>
-                <View style={{width:48,height:48,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
                     <TouchableOpacity onPress={()=>{this.topItemAction()}}>
                          <Image source={require('../imgs/home/ic_home_top_search.png')} 
-                           style={{width:24,height:24,marginRight:8,alignItems:'center'}}/>
+                           style={{width:16,height:16,marginRight:10,alignItems:'center',marginTop:15}}/>
                     </TouchableOpacity>
                 </View>  
           </View>

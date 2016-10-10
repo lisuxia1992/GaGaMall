@@ -19,7 +19,7 @@ const ShortLine = () => (
 );
 const styles=StyleSheet.create({
     short_line:{
-        marginLeft:10,
+        marginLeft:0,
     },
 });
 export default ShortLine;

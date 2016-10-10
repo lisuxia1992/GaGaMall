@@ -1,6 +1,7 @@
 'use strict';
 
-let HOST= 'http://10.18.3.32:8080/';
+// let HOST= 'http://10.18.3.32:8080/';
+let HOST = 'http://192.168.5.121:8081/';
 
 export function requestData(url,method,body){
   return new Promise((resolve, reject) => {

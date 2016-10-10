@@ -20,6 +20,7 @@ import ShortLine from '../component/ShortLine';
 import StoreList from './StoreList';
 var {height, width} = Dimensions.get('window');
 var content = '';
+
 const SEARCH_DATA={
     "api":"GetSearchHistory",
     "v":"1.0",
@@ -75,7 +76,13 @@ class Search extends React.Component {
   }
   //点击列表每一项响应按钮
   onPressItem(data){
-      
+      const {navigator} = this.props;
+      InteractionManager.runAfterInteractions(() => {
+            navigator.push({
+              component: StoreList,
+              name: 'StoreList'
+            });
+          });
   }
   //进行渲染数据
   renderContent(dataSource) {
@@ -107,18 +114,18 @@ class Search extends React.Component {
   render() {
     return (
        <View style={{backgroundColor:'#fff',flex:1}}>
-          <View style={{height:48,backgroundColor:'black',flexDirection:'row'}}>
-                <View style={{width:48,height:48,justifyContent:'center'}}>
+          <View style={{height:44,backgroundColor:'black',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'center'}}>
                      <TouchableOpacity onPress={() => {this.buttonBackAction()}} style={{justifyContent:'center',alignItems:'center'}} >
                            <Image 
-                                 style={{width:13,height:20}}
+                                 style={{width:10,height:16,marginTop:12,marginLeft:5}}
                                  source={require('../imgs/ic_center_back.png')}
                            />
                      </TouchableOpacity>  
                 </View>
                 <View style={{flex:1,justifyContent:'center',}}>
                     <TextInput 
-                            style={{ fontSize: 14, textAlign: 'left',flex:1,color:'white'}}
+                            style={{ fontSize: 14, textAlign: 'left',flex:1,color:'white',marginTop:15}}
                             placeholder="请输入商家或者商品名称"
                             placeholderTextColor="#aaaaaa"
                             underlineColorAndroid="transparent"
@@ -131,10 +138,10 @@ class Search extends React.Component {
                             }}
                       />
                 </View>
-                <View style={{width:48,height:48,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
                     <TouchableOpacity onPress={()=>{this.topItemAction(0)}}>
                          <Image source={require('../imgs/home/ic_home_top_search.png')} 
-                           style={{width:24,height:24,marginRight:8,alignItems:'center'}}/>
+                           style={{width:16,height:16,marginRight:10,alignItems:'center',marginTop:15}}/>
                     </TouchableOpacity>
                 </View>  
           </View>
@@ -147,10 +154,13 @@ class Search extends React.Component {
                 </View>
           </View>
           <ShortLine/>
-          <View style={{flex:1}}>
-               {this.renderContent(this.state.dataSource.cloneWithRows(
-                         this.state.searchDatas === undefined ? [] : this.state.searchDatas))}
-          </View>
+          <TouchableOpacity onPress={()=>{this.onPressItem(0)}}>
+            <View style={{flex:1}}>
+                 {this.renderContent(this.state.dataSource.cloneWithRows(
+                           this.state.searchDatas === undefined ? [] : this.state.searchDatas))}
+            </View>
+          </TouchableOpacity>
+          
       </View>
     );
   }

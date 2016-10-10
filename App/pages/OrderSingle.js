@@ -46,7 +46,7 @@ class OrderSingle extends React.Component {
                      />
                 </TouchableOpacity>  
                 <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-                    <Text style={{fontSize:18,color:'white',alignSelf:'center'}}>{route.order.shopName}</Text>   
+                    <Text style={{fontSize:18,color:'white',alignSelf:'center',marginTop:15}}>{route.order.shopName}</Text>   
                 </View>  
                 <View style={{width:48,height:48}}/>
           </View>

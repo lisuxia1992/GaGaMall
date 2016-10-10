@@ -165,22 +165,22 @@ class StoreList extends React.Component {
   render() {
     return (
        <View style={{backgroundColor:'#fff',flex:1}}>
-          <View style={{height:48,backgroundColor:'black',flexDirection:'row'}}>
-                <View style={{width:48,height:48,justifyContent:'center'}}>
+          <View style={{height:44,backgroundColor:'black',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'center'}}>
                      <TouchableOpacity onPress={() => {this.buttonBackAction()}} style={{justifyContent:'center',alignItems:'center'}} >
                            <Image 
-                                 style={{width:13,height:20}}
+                                 style={{width:10,height:16,marginTop:10}}
                                  source={require('../imgs/ic_center_back.png')}
                            />
                      </TouchableOpacity>  
                 </View>
                 <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                     <Text style={{color:'white'}}>商家列表</Text>
+                     <Text style={{color:'white',marginTop:10}}>商家列表</Text>
                 </View>
-                <View style={{width:48,height:48,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
+                <View style={{width:44,height:44,justifyContent:'flex-end',alignItems:'center',flexDirection:'row'}}>
                     <TouchableOpacity onPress={()=>{this.topItemAction(0)}}>
                          <Image source={require('../imgs/home/ic_home_top_search.png')} 
-                           style={{width:24,height:24,marginRight:8,alignItems:'center'}}/>
+                           style={{width:16,height:16,marginRight:8,alignItems:'center',marginTop:15}}/>
                     </TouchableOpacity>
                 </View>  
           </View>

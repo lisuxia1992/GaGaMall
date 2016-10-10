@@ -137,9 +137,9 @@ class Order extends Component {
     render() {
         return (
              <View style={{backgroundColor:'#f5f5f5',flex:1}}>
-                <View style={{height:48,backgroundColor:'black',flexDirection:'column'}}>
+                <View style={{height:44,backgroundColor:'black',flexDirection:'column'}}>
                     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-                       <Text style={{fontSize:18,color:'white',alignSelf:'center'}}>订单</Text>   
+                       <Text style={{fontSize:18,color:'white',alignSelf:'center',marginTop:15}}>订单</Text>   
                     </View>  
                 </View>
                 <View style={{flex:1}}>
